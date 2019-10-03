@@ -1,9 +1,10 @@
 ---
-- name: Nginx | Installation
-  include_tasks: "pkgmgr/{{ ansible_pkg_mgr }}.yml"
-
-- name: Nginx | Ensure Nginx service is enabled and started
+# tasks file for ansible/jino
+- name: 'install nginx packages'
+  package:
+    name: nginx
+    state: present
   service:
     name: nginx
-    enabled: yes
     state: started
+    enabled: yes
