@@ -7,6 +7,7 @@
   loop:
     - nginx
     - procps
+    - htop
 - name: 'start nginx service'
   service:
     name: nginx
